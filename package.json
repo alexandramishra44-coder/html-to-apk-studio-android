@@ -1,0 +1,21 @@
+{
+  "name": "html-to-apk-studio",
+  "version": "1.0.0",
+  "description": "HTML to APK Converter Studio - Android WebView App",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Static frontend - no build step needed'",
+    "cap:sync": "npx cap sync android",
+    "cap:open": "npx cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/app": "^6.0.1",
+    "@capacitor/status-bar": "^6.0.1",
+    "@capacitor/splash-screen": "^6.0.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2"
+  }
+}
