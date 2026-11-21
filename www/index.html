@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>HTML to APK Converter Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar (desktop) -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <div class="brand-text">
+          <span class="brand-name">APK Studio</span>
+          <span class="brand-sub">HTML → Android</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-view="dashboard"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
+        <a href="#" class="nav-item" data-view="new-project"><i class="fa-solid fa-plus"></i><span>New Project</span></a>
+        <a href="#" class="nav-item" data-view="projects"><i class="fa-solid fa-folder-open"></i><span>My Projects</span></a>
+        <a href="#" class="nav-item" data-view="customize" id="nav-customize" style="display:none"><i class="fa-solid fa-palette"></i><span>Customization</span></a>
+        <a href="#" class="nav-item" data-view="build" id="nav-build" style="display:none"><i class="fa-solid fa-hammer"></i><span>Build APK</span></a>
+        <a href="#" class="nav-item" data-view="history"><i class="fa-solid fa-clock-rotate-left"></i><span>Build History</span></a>
+        <a href="#" class="nav-item" data-view="settings"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="status-pill" id="server-status">
+          <span class="dot"></span>
+          <span>Checking...</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        <h1 class="page-title" id="page-title">Dashboard</h1>
+        <div class="topbar-actions">
+          <button class="btn btn-ghost" id="btn-refresh" title="Refresh"><i class="fa-solid fa-arrows-rotate"></i></button>
+        </div>
+      </header>
+
+      <div class="content" id="content">
+        <!-- Views injected by JS -->
+      </div>
+    </main>
+
+    <!-- Mobile bottom nav -->
+    <nav class="bottom-nav" id="bottom-nav">
+      <a href="#" class="bottom-item active" data-view="dashboard"><i class="fa-solid fa-gauge-high"></i><span>Home</span></a>
+      <a href="#" class="bottom-item" data-view="new-project"><i class="fa-solid fa-plus"></i><span>New</span></a>
+      <a href="#" class="bottom-item" data-view="projects"><i class="fa-solid fa-folder"></i><span>Projects</span></a>
+      <a href="#" class="bottom-item" data-view="history"><i class="fa-solid fa-clock"></i><span>History</span></a>
+      <a href="#" class="bottom-item" data-view="settings"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+    </nav>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toasts"></div>
+
+  <!-- Modal root -->
+  <div id="modal-root"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
